@@ -4,10 +4,10 @@
     },
     "dns": {
        "hosts": {
-             "dns.controld.com": ["76.76.2.22"]
+             "dns.google": ["8.8.8.8"]
        },
        "servers": [
-          "https://dns.controld.com/1ix9n70m5fw"
+          "https://8.8.8.8/dns-query"
        ],
        "queryStrategy": "UseIP",
        "tag": "built-in-DNS"
@@ -102,7 +102,7 @@
              "domainStrategy": "UseIP",
              "fragment": {
                 "packets": "tlshello",
-                "length": "9-15",
+                "length": "3-5",
                 "interval": "5"
              }
           },

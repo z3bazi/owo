@@ -55,7 +55,7 @@
           "settings": {
              "vnext": [
                 {
-                   "address": "188.114.98.10",
+                   "address": "188.114.96.2",
                    "port": 443,
                    "users": [
                       {
@@ -90,8 +90,8 @@
           },
           "mux": {
              "enabled": true,
-             "concurrency": 8,
-             "xudpConcurrency": 8,
+             "concurrency": 4,
+             "xudpConcurrency": 4,
              "xudpProxyUDP443": "reject"
           }
        },
@@ -102,7 +102,7 @@
              "domainStrategy": "UseIP",
              "fragment": {
                 "packets": "tlshello",
-                "length": "3-5",
+                "length": "9-15",
                 "interval": "5"
              }
           },

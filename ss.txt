@@ -1,164 +1,113 @@
 {
-    "log": {
-       "loglevel": "Warn"
+  "dns": {
+    "tag": "dns",
+    "hosts": {
+      "dns.controld.com": ["76.76.2.22"]
     },
-    "dns": {
-       "hosts": {
-             "dns.google": ["8.8.8.8"]
-       },
-       "servers": [
-          "https://8.8.8.8/dns-query"
-       ],
-       "queryStrategy": "UseIP",
-       "tag": "built-in-DNS"
+    "servers": [
+      "https://dns.controld.com/1ix9n70m5fw"
+    ]
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true
+      },
+      "tag": "socks"
     },
-    "inbounds": [
-       {
-          "listen": "127.0.0.1",
-          "port": 10808,
-          "protocol": "socks",
-          "tag": "socks_IN",
-          "settings": {
-             "udp": true
-          },
-          "sniffing": {
-             "enabled": true,
-             "destOverride": [
-                "http",
-                "tls",
-                "quic"
-             ]
-          }
-       },
-       {
-          "listen": "127.0.0.1",
-          "port": 10809,
-          "protocol": "http",
-          "settings": {
-             "allowTransparent": true,
-             "timeout": 300
-          },
-          "sniffing": {
-             "enabled": true,
-             "destOverride": [
-                "http",
-                "tls"
-             ]
-          },
-          "tag": "http_IN"
-       }
-    ],
-    "outbounds": [
-       {
-          "tag": "proxy",
-          "protocol": "vless",
-          "settings": {
-             "vnext": [
-                {
-                   "address": "188.114.96.2",
-                   "port": 443,
-                   "users": [
-                      {
-                         "id": "e8b77963-2cf4-4dc6-a80c-7d2d84c1f35a",
-                         "encryption": "none"
-                      }
-                   ]
-                }
-             ]
-          },
-          "streamSettings": {
-             "network": "ws",
-             "security": "tls",
-             "tlsSettings": {
-                "allowInsecure": false,
-                "minVersion": "1.2",
-                "fingerprint": "chrome", 
-                "serverName": "net.nahanmarket.top"
-             },
-             "wsSettings": {
-                "headers": {
-                   "Host": "net.nahanmarket.top"
-                },
-                "path": "/"
-             },
-             "sockopt": {
-                "tcpFastOpen": false,
-                "dialerProxy": "frag-out",
-                "tcpKeepAliveIdle": 120,
-                "tcpNoDelay": true
-             }
-          },
-          "mux": {
-             "enabled": true,
-             "concurrency": 4,
-             "xudpConcurrency": 4,
-             "xudpProxyUDP443": "reject"
-          }
-       },
-       {
-          "tag": "frag-out",
-          "protocol": "freedom",
-          "settings": {
-             "domainStrategy": "UseIP",
-             "fragment": {
-                "packets": "tlshello",
-                "length": "3-5",
-                "interval": "5"
-             }
-          },
-          "streamSettings": {
-             "sockopt": {
-                "TcpNoDelay": true,
-                "tcpKeepAliveIdle": 120,
-                "domainStrategy": "UseIP"
-             }
-          }
-       },
-       {
-          "protocol": "freedom",
-          "settings": {
-             "domainStrategy": "UseIP"
-          },
-          "streamSettings": {},
-          "tag": "direct"
-       },
-       {
-          "protocol": "blackhole",
-          "settings": {
-             "response": {
-                "type": "none"
-             }
-          },
-          "tag": "block"
-       },
-       {
-          "protocol": "dns",
-          "settings": {
-             "nonIPQuery": "drop"
-          },
-          "proxySettings": {
-             "tag": "proxy"
-          },
-          "tag": "dns-out"
-       }
-    ],
-    "routing": {
-       "domainMatcher": "hybrid",
-       "domainStrategy": "IPIfNonMatch",
-       "rules": [
-          {
-             "inboundTag": [
-                "socks_IN"
-             ],
-             "outboundTag": "dns-out",
-             "port": "53",
-             "type": "field"
-          },
-          {
-             "inboundTag": ["built-in-DNS"],
-             "outboundTag": "proxy",
-             "type": "field"
-          },{"domain":["ext:iran.dat:ads"],"outboundTag":"block","type":"field"},{"ip":["geoip:ir","geoip:private"],"outboundTag":"direct","type":"field"},{"domain":["ext:iran.dat:all"],"outboundTag":"direct","type":"field"}
-       ]
+    {
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "userLevel": 8
+      },
+      "tag": "http"
     }
- }
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "interval": "2-3",
+          "length": "150-300",
+          "packets": "tlshello"
+        }
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "",
+        "sockopt": {
+          "TcpNoDelay": true,
+          "domainStrategy": "UseIP",
+          "mark": 255
+        }
+      },
+      "tag": "fragment"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    },
+    {
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "127.0.0.1",
+            "level": 8,
+            "method": "chacha20-poly1305",
+            "ota": false,
+            "password": "",
+            "port": 1234
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": ""
+      },
+      "tag": "proxy"
+    }
+  ],
+  "remarks": "ControlD ",
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "inboundTag": [
+          "socks",
+          "http"
+        ],
+        "outboundTag": "fragment",
+        "type": "field"
+      }
+    ]
+  }
+}

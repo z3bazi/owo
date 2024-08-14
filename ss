@@ -1,1 +1,429 @@
-ewogICAgInJlbWFya3MiOiAi8J+SpiBCUEIgRnJhZyAtIEJlc3QgRnJhZ21lbnQg8J+YjiIsCiAgICAibG9nIjogewogICAgICAibG9nbGV2ZWwiOiAid2FybmluZyIKICAgIH0sCiAgICAiZG5zIjogewogICAgICAic2VydmVycyI6IFsKICAgICAgICAiaHR0cHM6Ly85NC4xNDAuMTQuMTQvZG5zLXF1ZXJ5IiwKICAgICAgICAiOC44LjguOCIKICAgICAgXSwKICAgICAgInRhZyI6ICJkbnMiCiAgICB9LAogICAgImluYm91bmRzIjogWwogICAgICB7CiAgICAgICAgInBvcnQiOiAxMDgwOCwKICAgICAgICAicHJvdG9jb2wiOiAic29ja3MiLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJhdXRoIjogIm5vYXV0aCIsCiAgICAgICAgICAidWRwIjogdHJ1ZSwKICAgICAgICAgICJ1c2VyTGV2ZWwiOiA4CiAgICAgICAgfSwKICAgICAgICAic25pZmZpbmciOiB7CiAgICAgICAgICAiZGVzdE92ZXJyaWRlIjogWwogICAgICAgICAgICAiaHR0cCIsCiAgICAgICAgICAgICJ0bHMiCiAgICAgICAgICBdLAogICAgICAgICAgImVuYWJsZWQiOiB0cnVlLAogICAgICAgICAgInJvdXRlT25seSI6IHRydWUKICAgICAgICB9LAogICAgICAgICJ0YWciOiAic29ja3MtaW4iCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAicG9ydCI6IDEwODA5LAogICAgICAgICJwcm90b2NvbCI6ICJodHRwIiwKICAgICAgICAic2V0dGluZ3MiOiB7CiAgICAgICAgICAiYXV0aCI6ICJub2F1dGgiLAogICAgICAgICAgInVkcCI6IHRydWUsCiAgICAgICAgICAidXNlckxldmVsIjogOAogICAgICAgIH0sCiAgICAgICAgInNuaWZmaW5nIjogewogICAgICAgICAgImRlc3RPdmVycmlkZSI6IFsKICAgICAgICAgICAgImh0dHAiLAogICAgICAgICAgICAidGxzIgogICAgICAgICAgXSwKICAgICAgICAgICJlbmFibGVkIjogdHJ1ZSwKICAgICAgICAgICJyb3V0ZU9ubHkiOiB0cnVlCiAgICAgICAgfSwKICAgICAgICAidGFnIjogImh0dHAtaW4iCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAibGlzdGVuIjogIjEyNy4wLjAuMSIsCiAgICAgICAgInBvcnQiOiAxMDg1MywKICAgICAgICAicHJvdG9jb2wiOiAiZG9rb2RlbW8tZG9vciIsCiAgICAgICAgInNldHRpbmdzIjogewogICAgICAgICAgImFkZHJlc3MiOiAiMS4xLjEuMSIsCiAgICAgICAgICAibmV0d29yayI6ICJ0Y3AsdWRwIiwKICAgICAgICAgICJwb3J0IjogNTMKICAgICAgICB9LAogICAgICAgICJ0YWciOiAiZG5zLWluIgogICAgICB9CiAgICBdLAogICAgIm91dGJvdW5kcyI6IFsKICAgICAgewogICAgICAgICJwcm90b2NvbCI6ICJ2bGVzcyIsCiAgICAgICAgInNldHRpbmdzIjogewogICAgICAgICAgInZuZXh0IjogWwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgImFkZHJlc3MiOiAidGFuZ3licGJhbGwucGFnZXMuZGV2IiwKICAgICAgICAgICAgICAicG9ydCI6IDQ0MywKICAgICAgICAgICAgICAidXNlcnMiOiBbCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICJlbmNyeXB0aW9uIjogIm5vbmUiLAogICAgICAgICAgICAgICAgICAiZmxvdyI6ICIiLAogICAgICAgICAgICAgICAgICAiaWQiOiAiNzcxZjdhY2YtOGJmZi00ODhkLTg1NmMtYjM3YWU2ODA4ZGVjIiwKICAgICAgICAgICAgICAgICAgImxldmVsIjogOCwKICAgICAgICAgICAgICAgICAgInNlY3VyaXR5IjogImF1dG8iCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgXQogICAgICAgICAgICB9CiAgICAgICAgICBdCiAgICAgICAgfSwKICAgICAgICAic3RyZWFtU2V0dGluZ3MiOiB7CiAgICAgICAgICAibmV0d29yayI6ICJ3cyIsCiAgICAgICAgICAic2VjdXJpdHkiOiAidGxzIiwKICAgICAgICAgICJzb2Nrb3B0IjogewogICAgICAgICAgICAidGNwS2VlcEFsaXZlSWRsZSI6IDEwMCwKICAgICAgICAgICAgInRjcE5vRGVsYXkiOiB0cnVlCiAgICAgICAgICB9LAogICAgICAgICAgInRsc1NldHRpbmdzIjogewogICAgICAgICAgICAiYWxsb3dJbnNlY3VyZSI6IGZhbHNlLAogICAgICAgICAgICAiZmluZ2VycHJpbnQiOiAiY2hyb21lIiwKICAgICAgICAgICAgImFscG4iOiBbCiAgICAgICAgICAgICAgImgyIiwKICAgICAgICAgICAgICAiaHR0cC8xLjEiCiAgICAgICAgICAgIF0sCiAgICAgICAgICAgICJzZXJ2ZXJOYW1lIjogIlRhTmdZYlBCQWxMLnBhZ2VzLkRldiIKICAgICAgICAgIH0sCiAgICAgICAgICAid3NTZXR0aW5ncyI6IHsKICAgICAgICAgICAgImhlYWRlcnMiOiB7CiAgICAgICAgICAgICAgIkhvc3QiOiAiVGFuZ1licEJBbGwuUGFnRXMuZGVWIgogICAgICAgICAgICB9LAogICAgICAgICAgICAicGF0aCI6ICIvY0haMnFhNXNqakQ3N0FkSz9lZD0yNTYwIgogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgInRhZyI6ICJwcm94eSIKICAgICAgfSwKICAgICAgewogICAgICAgICJwcm90b2NvbCI6ICJkbnMiLAogICAgICAgICJ0YWciOiAiZG5zLW91dCIKICAgICAgfSwKICAgICAgewogICAgICAgICJwcm90b2NvbCI6ICJmcmVlZG9tIiwKICAgICAgICAic2V0dGluZ3MiOiB7fSwKICAgICAgICAidGFnIjogImRpcmVjdCIKICAgICAgfSwKICAgICAgewogICAgICAgICJwcm90b2NvbCI6ICJibGFja2hvbGUiLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJyZXNwb25zZSI6IHsKICAgICAgICAgICAgInR5cGUiOiAiaHR0cCIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJ0YWciOiAiYmxvY2siCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGFnIjogImZyYWdfMSIsCiAgICAgICAgInByb3RvY29sIjogImZyZWVkb20iLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJmcmFnbWVudCI6IHsKICAgICAgICAgICAgInBhY2tldHMiOiAidGxzaGVsbG8iLAogICAgICAgICAgICAibGVuZ3RoIjogIjEwLTIwIiwKICAgICAgICAgICAgImludGVydmFsIjogIjEtMSIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJwcm94eVNldHRpbmdzIjogewogICAgICAgICAgInRhZyI6ICJwcm94eSIKICAgICAgICB9CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGFnIjogImZyYWdfMiIsCiAgICAgICAgInByb3RvY29sIjogImZyZWVkb20iLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJmcmFnbWVudCI6IHsKICAgICAgICAgICAgInBhY2tldHMiOiAidGxzaGVsbG8iLAogICAgICAgICAgICAibGVuZ3RoIjogIjIwLTMwIiwKICAgICAgICAgICAgImludGVydmFsIjogIjEtMSIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJwcm94eVNldHRpbmdzIjogewogICAgICAgICAgInRhZyI6ICJwcm94eSIKICAgICAgICB9CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGFnIjogImZyYWdfMyIsCiAgICAgICAgInByb3RvY29sIjogImZyZWVkb20iLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJmcmFnbWVudCI6IHsKICAgICAgICAgICAgInBhY2tldHMiOiAidGxzaGVsbG8iLAogICAgICAgICAgICAibGVuZ3RoIjogIjMwLTQwIiwKICAgICAgICAgICAgImludGVydmFsIjogIjEtMSIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJwcm94eVNldHRpbmdzIjogewogICAgICAgICAgInRhZyI6ICJwcm94eSIKICAgICAgICB9CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGFnIjogImZyYWdfNCIsCiAgICAgICAgInByb3RvY29sIjogImZyZWVkb20iLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJmcmFnbWVudCI6IHsKICAgICAgICAgICAgInBhY2tldHMiOiAidGxzaGVsbG8iLAogICAgICAgICAgICAibGVuZ3RoIjogIjQwLTUwIiwKICAgICAgICAgICAgImludGVydmFsIjogIjEtMSIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJwcm94eVNldHRpbmdzIjogewogICAgICAgICAgInRhZyI6ICJwcm94eSIKICAgICAgICB9CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGFnIjogImZyYWdfNSIsCiAgICAgICAgInByb3RvY29sIjogImZyZWVkb20iLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJmcmFnbWVudCI6IHsKICAgICAgICAgICAgInBhY2tldHMiOiAidGxzaGVsbG8iLAogICAgICAgICAgICAibGVuZ3RoIjogIjUwLTYwIiwKICAgICAgICAgICAgImludGVydmFsIjogIjEtMSIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJwcm94eVNldHRpbmdzIjogewogICAgICAgICAgInRhZyI6ICJwcm94eSIKICAgICAgICB9CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGFnIjogImZyYWdfNiIsCiAgICAgICAgInByb3RvY29sIjogImZyZWVkb20iLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJmcmFnbWVudCI6IHsKICAgICAgICAgICAgInBhY2tldHMiOiAidGxzaGVsbG8iLAogICAgICAgICAgICAibGVuZ3RoIjogIjYwLTcwIiwKICAgICAgICAgICAgImludGVydmFsIjogIjEtMSIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJwcm94eVNldHRpbmdzIjogewogICAgICAgICAgInRhZyI6ICJwcm94eSIKICAgICAgICB9CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGFnIjogImZyYWdfNyIsCiAgICAgICAgInByb3RvY29sIjogImZyZWVkb20iLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJmcmFnbWVudCI6IHsKICAgICAgICAgICAgInBhY2tldHMiOiAidGxzaGVsbG8iLAogICAgICAgICAgICAibGVuZ3RoIjogIjcwLTgwIiwKICAgICAgICAgICAgImludGVydmFsIjogIjEtMSIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJwcm94eVNldHRpbmdzIjogewogICAgICAgICAgInRhZyI6ICJwcm94eSIKICAgICAgICB9CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGFnIjogImZyYWdfOCIsCiAgICAgICAgInByb3RvY29sIjogImZyZWVkb20iLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJmcmFnbWVudCI6IHsKICAgICAgICAgICAgInBhY2tldHMiOiAidGxzaGVsbG8iLAogICAgICAgICAgICAibGVuZ3RoIjogIjgwLTkwIiwKICAgICAgICAgICAgImludGVydmFsIjogIjEtMSIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJwcm94eVNldHRpbmdzIjogewogICAgICAgICAgInRhZyI6ICJwcm94eSIKICAgICAgICB9CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGFnIjogImZyYWdfOSIsCiAgICAgICAgInByb3RvY29sIjogImZyZWVkb20iLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJmcmFnbWVudCI6IHsKICAgICAgICAgICAgInBhY2tldHMiOiAidGxzaGVsbG8iLAogICAgICAgICAgICAibGVuZ3RoIjogIjkwLTEwMCIsCiAgICAgICAgICAgICJpbnRlcnZhbCI6ICIxLTEiCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAicHJveHlTZXR0aW5ncyI6IHsKICAgICAgICAgICJ0YWciOiAicHJveHkiCiAgICAgICAgfQogICAgICB9LAogICAgICB7CiAgICAgICAgInRhZyI6ICJmcmFnXzEwIiwKICAgICAgICAicHJvdG9jb2wiOiAiZnJlZWRvbSIsCiAgICAgICAgInNldHRpbmdzIjogewogICAgICAgICAgImZyYWdtZW50IjogewogICAgICAgICAgICAicGFja2V0cyI6ICJ0bHNoZWxsbyIsCiAgICAgICAgICAgICJsZW5ndGgiOiAiMTAtMzAiLAogICAgICAgICAgICAiaW50ZXJ2YWwiOiAiMS0xIgogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgInByb3h5U2V0dGluZ3MiOiB7CiAgICAgICAgICAidGFnIjogInByb3h5IgogICAgICAgIH0KICAgICAgfSwKICAgICAgewogICAgICAgICJ0YWciOiAiZnJhZ18xMSIsCiAgICAgICAgInByb3RvY29sIjogImZyZWVkb20iLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJmcmFnbWVudCI6IHsKICAgICAgICAgICAgInBhY2tldHMiOiAidGxzaGVsbG8iLAogICAgICAgICAgICAibGVuZ3RoIjogIjIwLTQwIiwKICAgICAgICAgICAgImludGVydmFsIjogIjEtMSIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJwcm94eVNldHRpbmdzIjogewogICAgICAgICAgInRhZyI6ICJwcm94eSIKICAgICAgICB9CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGFnIjogImZyYWdfMTIiLAogICAgICAgICJwcm90b2NvbCI6ICJmcmVlZG9tIiwKICAgICAgICAic2V0dGluZ3MiOiB7CiAgICAgICAgICAiZnJhZ21lbnQiOiB7CiAgICAgICAgICAgICJwYWNrZXRzIjogInRsc2hlbGxvIiwKICAgICAgICAgICAgImxlbmd0aCI6ICIzMC01MCIsCiAgICAgICAgICAgICJpbnRlcnZhbCI6ICIxLTEiCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAicHJveHlTZXR0aW5ncyI6IHsKICAgICAgICAgICJ0YWciOiAicHJveHkiCiAgICAgICAgfQogICAgICB9LAogICAgICB7CiAgICAgICAgInRhZyI6ICJmcmFnXzEzIiwKICAgICAgICAicHJvdG9jb2wiOiAiZnJlZWRvbSIsCiAgICAgICAgInNldHRpbmdzIjogewogICAgICAgICAgImZyYWdtZW50IjogewogICAgICAgICAgICAicGFja2V0cyI6ICJ0bHNoZWxsbyIsCiAgICAgICAgICAgICJsZW5ndGgiOiAiNDAtNjAiLAogICAgICAgICAgICAiaW50ZXJ2YWwiOiAiMS0xIgogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgInByb3h5U2V0dGluZ3MiOiB7CiAgICAgICAgICAidGFnIjogInByb3h5IgogICAgICAgIH0KICAgICAgfSwKICAgICAgewogICAgICAgICJ0YWciOiAiZnJhZ18xNCIsCiAgICAgICAgInByb3RvY29sIjogImZyZWVkb20iLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJmcmFnbWVudCI6IHsKICAgICAgICAgICAgInBhY2tldHMiOiAidGxzaGVsbG8iLAogICAgICAgICAgICAibGVuZ3RoIjogIjUwLTcwIiwKICAgICAgICAgICAgImludGVydmFsIjogIjEtMSIKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJwcm94eVNldHRpbmdzIjogewogICAgICAgICAgInRhZyI6ICJwcm94eSIKICAgICAgICB9CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGFnIjogImZyYWdfMTUiLAogICAgICAgICJwcm90b2NvbCI6ICJmcmVlZG9tIiwKICAgICAgICAic2V0dGluZ3MiOiB7CiAgICAgICAgICAiZnJhZ21lbnQiOiB7CiAgICAgICAgICAgICJwYWNrZXRzIjogInRsc2hlbGxvIiwKICAgICAgICAgICAgImxlbmd0aCI6ICI2MC04MCIsCiAgICAgICAgICAgICJpbnRlcnZhbCI6ICIxLTEiCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAicHJveHlTZXR0aW5ncyI6IHsKICAgICAgICAgICJ0YWciOiAicHJveHkiCiAgICAgICAgfQogICAgICB9LAogICAgICB7CiAgICAgICAgInRhZyI6ICJmcmFnXzE2IiwKICAgICAgICAicHJvdG9jb2wiOiAiZnJlZWRvbSIsCiAgICAgICAgInNldHRpbmdzIjogewogICAgICAgICAgImZyYWdtZW50IjogewogICAgICAgICAgICAicGFja2V0cyI6ICJ0bHNoZWxsbyIsCiAgICAgICAgICAgICJsZW5ndGgiOiAiNzAtOTAiLAogICAgICAgICAgICAiaW50ZXJ2YWwiOiAiMS0xIgogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgInByb3h5U2V0dGluZ3MiOiB7CiAgICAgICAgICAidGFnIjogInByb3h5IgogICAgICAgIH0KICAgICAgfSwKICAgICAgewogICAgICAgICJ0YWciOiAiZnJhZ18xNyIsCiAgICAgICAgInByb3RvY29sIjogImZyZWVkb20iLAogICAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAgICJmcmFnbWVudCI6IHsKICAgICAgICAgICAgInBhY2tldHMiOiAidGxzaGVsbG8iLAogICAgICAgICAgICAibGVuZ3RoIjogIjgwLTEwMCIsCiAgICAgICAgICAgICJpbnRlcnZhbCI6ICIxLTEiCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAicHJveHlTZXR0aW5ncyI6IHsKICAgICAgICAgICJ0YWciOiAicHJveHkiCiAgICAgICAgfQogICAgICB9LAogICAgICB7CiAgICAgICAgInRhZyI6ICJmcmFnXzE4IiwKICAgICAgICAicHJvdG9jb2wiOiAiZnJlZWRvbSIsCiAgICAgICAgInNldHRpbmdzIjogewogICAgICAgICAgImZyYWdtZW50IjogewogICAgICAgICAgICAicGFja2V0cyI6ICJ0bHNoZWxsbyIsCiAgICAgICAgICAgICJsZW5ndGgiOiAiMTAwLTIwMCIsCiAgICAgICAgICAgICJpbnRlcnZhbCI6ICIxLTEiCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAicHJveHlTZXR0aW5ncyI6IHsKICAgICAgICAgICJ0YWciOiAicHJveHkiCiAgICAgICAgfQogICAgICB9CiAgICBdLAogICAgInBvbGljeSI6IHsKICAgICAgImxldmVscyI6IHsKICAgICAgICAiOCI6IHsKICAgICAgICAgICJjb25uSWRsZSI6IDMwMCwKICAgICAgICAgICJkb3dubGlua09ubHkiOiAxLAogICAgICAgICAgImhhbmRzaGFrZSI6IDQsCiAgICAgICAgICAidXBsaW5rT25seSI6IDEKICAgICAgICB9CiAgICAgIH0sCiAgICAgICJzeXN0ZW0iOiB7CiAgICAgICAgInN0YXRzT3V0Ym91bmRVcGxpbmsiOiB0cnVlLAogICAgICAgICJzdGF0c091dGJvdW5kRG93bmxpbmsiOiB0cnVlCiAgICAgIH0KICAgIH0sCiAgICAicm91dGluZyI6IHsKICAgICAgImRvbWFpblN0cmF0ZWd5IjogIklQSWZOb25NYXRjaCIsCiAgICAgICJydWxlcyI6IFsKICAgICAgICB7CiAgICAgICAgICAiaW5ib3VuZFRhZyI6IFsKICAgICAgICAgICAgImRucy1pbiIKICAgICAgICAgIF0sCiAgICAgICAgICAib3V0Ym91bmRUYWciOiAiZG5zLW91dCIsCiAgICAgICAgICAidHlwZSI6ICJmaWVsZCIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJiYWxhbmNlclRhZyI6ICJhbGwiLAogICAgICAgICAgInR5cGUiOiAiZmllbGQiLAogICAgICAgICAgIm5ldHdvcmsiOiAidGNwLHVkcCIKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJiYWxhbmNlcnMiOiBbCiAgICAgICAgewogICAgICAgICAgInRhZyI6ICJhbGwiLAogICAgICAgICAgInNlbGVjdG9yIjogWwogICAgICAgICAgICAiZnJhZyIKICAgICAgICAgIF0sCiAgICAgICAgICAic3RyYXRlZ3kiOiB7CiAgICAgICAgICAgICJ0eXBlIjogImxlYXN0UGluZyIKICAgICAgICAgIH0KICAgICAgICB9CiAgICAgIF0KICAgIH0sCiAgICAib2JzZXJ2YXRvcnkiOiB7CiAgICAgICJwcm9iZUludGVydmFsIjogIjMwcyIsCiAgICAgICJwcm9iZVVSTCI6ICJodHRwczovL2FwaS5naXRodWIuY29tL19wcml2YXRlL2Jyb3dzZXIvc3RhdHMiLAogICAgICAic3ViamVjdFNlbGVjdG9yIjogWwogICAgICAgICJmcmFnIgogICAgICBdLAogICAgICAiRW5hYmxlQ29uY3VycmVuY3kiOiB0cnVlCiAgICB9LAogICAgInN0YXRzIjoge30KICB9==
+{
+    "remarks": "💦 BPB Frag - Best Fragment 😎",
+    "log": {
+      "loglevel": "warning"
+    },
+    "dns": {
+      "servers": [
+        "https://94.140.14.14/dns-query",
+        "8.8.8.8"
+      ],
+      "tag": "dns"
+    },
+    "inbounds": [
+      {
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "userLevel": 8
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "enabled": true,
+          "routeOnly": true
+        },
+        "tag": "socks-in"
+      },
+      {
+        "port": 10809,
+        "protocol": "http",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "userLevel": 8
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "enabled": true,
+          "routeOnly": true
+        },
+        "tag": "http-in"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10853,
+        "protocol": "dokodemo-door",
+        "settings": {
+          "address": "1.1.1.1",
+          "network": "tcp,udp",
+          "port": 53
+        },
+        "tag": "dns-in"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "tangybpball.pages.dev",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "flow": "",
+                  "id": "771f7acf-8bff-488d-856c-b37ae6808dec",
+                  "level": 8,
+                  "security": "auto"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "sockopt": {
+            "tcpKeepAliveIdle": 100,
+            "tcpNoDelay": true
+          },
+          "tlsSettings": {
+            "allowInsecure": false,
+            "fingerprint": "chrome",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "serverName": "TaNgYbPBAlL.pages.Dev"
+          },
+          "wsSettings": {
+            "headers": {
+              "Host": "TangYbpBAll.PagEs.deV"
+            },
+            "path": "/cHZ2qa5sjjD77AdK?ed=2560"
+          }
+        },
+        "tag": "proxy"
+      },
+      {
+        "protocol": "dns",
+        "tag": "dns-out"
+      },
+      {
+        "protocol": "freedom",
+        "settings": {},
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        },
+        "tag": "block"
+      },
+      {
+        "tag": "frag_1",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "10-20",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_2",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "20-30",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_3",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "30-40",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_4",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "40-50",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_5",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "50-60",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_6",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "60-70",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_7",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "70-80",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_8",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "80-90",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_9",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "90-100",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_10",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "10-30",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_11",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "20-40",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_12",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "30-50",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_13",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "40-60",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_14",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "50-70",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_15",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "60-80",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_16",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "70-90",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_17",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "80-100",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      },
+      {
+        "tag": "frag_18",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "100-200",
+            "interval": "1-1"
+          }
+        },
+        "proxySettings": {
+          "tag": "proxy"
+        }
+      }
+    ],
+    "policy": {
+      "levels": {
+        "8": {
+          "connIdle": 300,
+          "downlinkOnly": 1,
+          "handshake": 4,
+          "uplinkOnly": 1
+        }
+      },
+      "system": {
+        "statsOutboundUplink": true,
+        "statsOutboundDownlink": true
+      }
+    },
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "inboundTag": [
+            "dns-in"
+          ],
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "balancerTag": "all",
+          "type": "field",
+          "network": "tcp,udp"
+        }
+      ],
+      "balancers": [
+        {
+          "tag": "all",
+          "selector": [
+            "frag"
+          ],
+          "strategy": {
+            "type": "leastPing"
+          }
+        }
+      ]
+    },
+    "observatory": {
+      "probeInterval": "30s",
+      "probeURL": "https://api.github.com/_private/browser/stats",
+      "subjectSelector": [
+        "frag"
+      ],
+      "EnableConcurrency": true
+    },
+    "stats": {}
+  }

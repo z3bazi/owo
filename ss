@@ -1395,4 +1395,163 @@
     ]
   },
   "stats": {}
+}{
+  "dns": {
+    "queryStrategy": "UseIP",
+    "servers": [
+      {
+        "address": "8.8.8.8",
+        "skipFallback": false
+      }
+    ],
+    "tag": "dns_out"
+  },
+  "inbounds": [
+    {
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "enabled": true
+      },
+      "tag": "socks"
+    },
+    {
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "userLevel": 8
+      },
+      "tag": "http"
+    }
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "tag": "proxy",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "fcvbb.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "10.202.8.146",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "noises": [],
+        "redirect": ""
+      },
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "fragment": {
+          "packets": "1-2",
+          "length": "1-5",
+          "interval": "3-5"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        }
+      }
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundDownlink": true,
+      "statsOutboundUplink": true
+    }
+  },
+  "remarks": "Nahan-gpsv03ug",
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "network": "tcp,udp",
+        "outboundTag": "proxy",
+        "type": "field"
+      }
+    ]
+  },
+  "stats": {}
 }]
